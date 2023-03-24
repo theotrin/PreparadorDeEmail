@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Aqui Que A Magica Acontece.js"></script>
+</head>
+<body>
+    <div id="titulo">
+
+    <h1>Email pronto</h1>
+    <h3>facilitador de enviador de emails institucionais por Theo Trindade</h3>
+
+</div>
+
+<div id="corpo">
+
+
+<div id="intrutor">
+    
+        <label for="nome intrutor"> Qual o instrutor?:</label>
+        
+            <select name="instrutor" class="selected-box" id="nomeCordenador">
+                <option selected value="none"></option>
+                <option value="geoprocessamento">Maria Emilia</option>
+                <option value="eletrotecnica">Deborah Tavares</option>
+                <option value="nutricao">Ires Silva</option>
+                <option value="servicos juridicos">Mauro</option>
+                <option value="rh">Greciane Rossetti</option>
+            </select>
+
+</div>
+
+
+<div id="Intrutor">
+
+    <label for="">Se trata de um professor ou professora?</label>
+    <select  class="selected-box" name="" id="sexoInstrutor">
+        <option value=""></option>
+        <option value="do professor">professor</option>
+        <option value="da professora">professora</option>
+    </select>
+    <br>
+
+    <label for="">Qual nome do professor(a)?</label>
+    <input type="text" name=""  placeholder="Nome Completo" id="NomeDocente">
+
+</div>
+
+
+<div id="CursoDisciplina">
+    
+    <label for="">Qual o curso e disciplina ministrada?</label>
+
+    <input type="text" name="" placeholder="Nome da Disciplina" id="disciplina">
+    <br>
+    <label for="">Qual curso?</label>
+    <select  class="selected-box" name="" id="TecnicoEm">
+        <option value=""></option>
+        <option value="">Geoprocessamento</option>
+        <option value="">Eletrotecnica </option>
+        <option value="">Nutrição </option>
+        <option value="">Serviços Juridicos</option>
+        <option value="">Gastronomia</option>
+        <option value="">(RH)Recursos Humanos</option>
+        <option value="">Refrigeração</option>
+        <option value="">Enfermagem </option>
+        <option value="">Cordenadora de RH</option>
+
+    </select>
+    
+<br>
+    <label id="testee" for="" >Qual a carga horaria do curso?: </label>
+    <select class="selected-box" name="" id="HoraAula">
+        <option value=""> </option>
+        <option value="">15h</option>
+        <option value="">30h</option>
+        <option value="">50h</option>
+        <option value="">60h</option>
+        <option value="">80h</option>
+    </select>
+    <br>
+
+</div>
+
+
+
+    
+
+
+<div id="datas">
+    <label for="">Data de inicio: </label>
+    <input type="date" name="" id="DataInicio">
+    <label for="">Data de fim: </label>
+    <input type="date" name="" id="DataFim">
+</div>
+
+<div id="butao">
+    <button>
+        <span onclick="enviar()"> Preparar Email
+        </span>
+      </button>
+</div>
+
+</div>
+
+<div id="bottom">
+
+</div>
+    
+</body>
+</html>
