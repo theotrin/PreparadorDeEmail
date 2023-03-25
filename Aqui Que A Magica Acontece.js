@@ -13,6 +13,10 @@ function enviar(){
     let sexoProfessor = document.querySelector("#sexoInstrutor")
     let ProfessorOuProfessora = sexoProfessor.options[sexoProfessor.selectedIndex].text
 
+    let date = new Date()
+    let horas = date.getHours()
+    let cortesia = BomDiaTardeNoite(horas)
+
     let docente = OouA(ProfessorOuProfessora)
 
     let NomeDocente = document.querySelector("#NomeDocente").value
@@ -26,9 +30,11 @@ function enviar(){
     let horarioDiv = document.querySelector("#HoraAula")
     let cargaHoraria = horarioDiv.options[horarioDiv.selectedIndex].text 
 
-    let DataInicio = document.querySelector("#DataInicio").value
-    let DataFim = document.querySelector("#DataFim").value
+    let DataInicioAmericana = document.querySelector("#DataInicio").value
+    let DataInicio = DataInicioAmericana.split('-').reverse().join('/')
 
+    let DataFimAmericana = document.querySelector("#DataFim").value
+    let DataFim = DataFimAmericana.split('-').reverse().join('/')
 
     final.innerHTML = ` 
     
@@ -36,20 +42,40 @@ function enviar(){
     
     <h2> Assunto: Documentação ${docente} ${NomeDocente} da disciplina: ${NomeDisciplina} do ${Tec}  </h2>
 
-    <p> horario
+    <p> ${cortesia}
         <br>
         Segue em Anexo a documentação ${docente}: <strong>${NomeDocente}</strong> para ministrar a disciplina: ${NomeDisciplina} (${cargaHoraria}) no periodo de <strong>${DataInicio}</strong> a <strong>${DataFim}</strong>
         <br><br>
-        Atenciosamente
+        <strong>
+            Atenciosamente,
+            <br><br><br>
+            
+            
+            Adrião Cavalcante Rocha Neto
+            <br>
+            Analista Técnico Educacional
+            <br>
+            CETAM – Itacoatiara
+            <br>
+            99189 3695
+        </strong>
 
 
     </p>
     
     `
-  
-
 }
 
+function BomDiaTardeNoite(horario){
+    if (horario >=0 && horario <= 12){
+        return horario = 'bom dia'
+    }else if (horario >= 12 && horario <=18){
+        return horario = 'boa tarde'
+    }else{
+        return horario = 'boa noite'
+    }
+
+}
 
 function OouA(instrutor){
 
